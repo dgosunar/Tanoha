@@ -1,0 +1,225 @@
+/* General Navbar */
+.container {
+    display: flex;
+    height: 34px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px 0px var(--black);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 21px;
+    padding: 8px;
+}
+
+
+
+.logo {
+    display: flex;
+    height: 100%;
+}
+
+.deskMenu {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.burguerButton {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.burguerButton.open {
+    display: none;
+}
+
+.background {
+    display: none;
+}
+
+.background.open {
+    display: flex;
+    position: absolute;
+    margin-top: 50px;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 23, 36, 0.75);
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+.mobMenu {
+    display: none;
+}
+
+.mobMenu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 50px 15px 15px 15px;
+    margin-top: 50px;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    width: calc(100% - 30px);
+    background-color: var(--secondary-main);
+    color: var(--primary-main);
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
+}
+
+.itemList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    height: 30px;
+}
+
+.itemSelected {
+    color: var(--secondary-main);
+    height: 30px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.dashitemSelected {
+    color: var(--secondary-main);
+    height: 100%;
+    border-top: 2px solid var(--secondary-main);
+}
+
+.xBotton {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    z-index: 30;
+}
+
+.dashContainer {
+    display: flex;
+    height: 50px;
+    width: 100vw;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+    background: var(--primary-main);
+    box-shadow: 0px 4px 10px 0px var(--black);
+}
+
+.dashlogo {
+    display: flex;
+    height: 100%;
+}
+
+.dashMenu {
+    display: flex;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-main);
+    color: var(--white);
+    align-items: center;
+    gap: 75px;
+}
+
+.dashItemList {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 10px 60px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        padding: 5px 30px;
+        height: calc(100% - 10px);
+    }
+
+    .item {
+        width: calc(100%/5);
+        height: 100%;
+    }
+
+    .dashItemList {
+        height: 100%;
+        gap: 0;
+    }
+
+    .itemSelected {
+        color: var(--primary-main);
+    }
+
+    .dashlogo {
+        display: none;
+    }
+
+    .dashContainer {
+        top: auto;
+        bottom: 0;
+    }
+
+    .deskMenu {
+        display: none;
+    }
+
+    .xBotton.open {
+        display: flex;
+    }
+
+    .dashContainer {
+        box-shadow: 0px -4px 10px 0px var(--black);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 5px 15px;
+        height: calc(100% - 10px);
+    }
+}
