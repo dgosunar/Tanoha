@@ -13,15 +13,15 @@ function Home() {
 
   const logIn = () => {
     setIsLogin(true);
-    redirecionar("/Task_Habits/summary");
+    redirecionar("/Tanoha/summary");
   };
 
   return (
     <Layout>
       <Container>
         <LogoBox>
-          <img src="./Logos/CompletLogo_light.png" alt="imagotipo" />
-          <div className="se  condarySubtitle">
+          <img src="./Logos/CompletLogoLight.png" alt="imagotipo" />
+          <div className="secondarySubtitle">
             Gestiona tus tareas, conquista tus metas
           </div>
           <div className="secondarySubtitle">

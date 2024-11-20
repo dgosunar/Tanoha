@@ -7,14 +7,14 @@ import { useNavigate } from "react-router-dom";
 
 function NotFound2() {
   const navigate = useNavigate();
-  const redi = () => navigate("/Task_Habits/");
+  const redi = () => navigate("/Tanoha/");
   return (
     <Layout>
       <Container>
         <div className="primaryTitle">Pagina No Encontrada</div>
         <PBotton onClick={redi}>Volver</PBotton>
         <img
-          src="./Task_Habits/Images/404 error with person looking for-bro.png"
+          src="./Tanoha/Images/404 error with person looking for-bro.png"
           alt="image404"
         />
         <a

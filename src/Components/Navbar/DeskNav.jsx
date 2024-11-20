@@ -16,11 +16,11 @@ function DeskNav({ titles }) {
 
   const logOut = () => {
     setIsLogin(false);
-    redirecionar("/Task_Habits/");
+    redirecionar("/Tanoha/");
   };
   const logIn = () => {
     setIsLogin(true);
-    redirecionar("/Task_Habits/summary");
+    redirecionar("/Tanoha/summary");
   };
 
   return (

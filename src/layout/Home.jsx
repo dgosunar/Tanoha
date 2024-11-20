@@ -22,26 +22,28 @@ export const MainContainer = styled.div`
   padding: 10px 120px;
 
   @media screen and (max-width: 1024px) {
-    padding: 10px 120px;
+    width: calc(100% - 120px);
+    padding: 10px 60px;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 10px 120px;
+    width: calc(100% - 60px);
+    padding: 10px 30px;
   }
 
   @media screen and (max-width: 600px) {
-    padding: 10px 120px;
+    width: calc(100% - 20px);
+    padding: 10px 10px;
   }
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 60px 120px 15px 120px;
   gap: 10px;
   justify-content: center;
   align-items: flex-start;
-  height: calc(100% - 80px);
+  height: calc(100% - 50px);
   color: var(--white);
   overflow-y: auto;
 
@@ -49,7 +51,6 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    box-shadow: 0px 4px 10px 0px var(--black);
   }
 
   @media screen and (max-width: 600px) {

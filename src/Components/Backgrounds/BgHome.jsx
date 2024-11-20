@@ -11,8 +11,6 @@ function BbHome() {
 export { BbHome };
 
 export const Fondo = styled.div`
-  width: 100vw;
-  height: 100vh;
   z-index: -1;
 
   img {

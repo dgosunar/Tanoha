@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 function NotFound() {
   const navigate = useNavigate();
-  const redi = () => navigate("/Task_Habits/");
+  const redi = () => navigate("/Tanoha/");
   return (
     <Layout>
       <Container>

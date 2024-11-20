@@ -16,15 +16,15 @@ import NotFound2 from "./pages/NotFound2";
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: "/Task_Habits/", element: <Home /> },
-    { path: "/Task_Habits/contact", element: <Contact /> },
-    { path: "/Task_Habits/*", element: <NotFound /> },
+    { path: "/Tanoha/", element: <Home /> },
+    { path: "/Tanoha/contact", element: <Contact /> },
+    { path: "/Tanoha/*", element: <NotFound /> },
     { path: "/*", element: <NotFound2 /> },
-    { path: "/Task_Habits/summary", element: <Summary /> },
-    { path: "/Task_Habits/tasks", element: <Tasks /> },
-    { path: "/Task_Habits/notes", element: <Notes /> },
-    { path: "/Task_Habits/space", element: <SpaceWork /> },
-    { path: "/Task_Habits/habits", element: <Habits /> },
+    { path: "/Tanoha/summary", element: <Summary /> },
+    { path: "/Tanoha/tasks", element: <Tasks /> },
+    { path: "/Tanoha/notes", element: <Notes /> },
+    { path: "/Tanoha/space", element: <SpaceWork /> },
+    { path: "/Tanoha/habits", element: <Habits /> },
   ]);
   return routes;
 };
