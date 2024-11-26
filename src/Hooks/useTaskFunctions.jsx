@@ -40,11 +40,11 @@ const useTaskFunctions = (generalStatus) => {
   // ==============================================================
   //Filtrador de tareas ===========================================
 
-  const [searchValue, setSearchValue] = React.useState("");
+  const [searchTasks, setSearchTasks] = React.useState("");
 
   const searchTask = () =>
     task.filter((t) =>
-      t.text.toLowerCase().includes(searchValue.toLowerCase())
+      t.text.toLowerCase().includes(searchTasks.toLowerCase())
     );
 
   const selectTask = (spaceId) =>
@@ -92,8 +92,8 @@ const useTaskFunctions = (generalStatus) => {
     loading,
     error,
     selectTask,
-    searchValue,
-    setSearchValue,
+    searchTasks,
+    setSearchTasks,
     totalTask,
     totalPending,
     totalCompleted,

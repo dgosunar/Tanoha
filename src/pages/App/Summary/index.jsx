@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "../../../layout/Dashboard";
+import { Dash } from "../../../layout/Dash";
 import { Context } from "../../../Context";
 import { TaskList } from "../Tasks/taskUI";
 import { Task } from "../Tasks/Components/Task";
@@ -27,7 +27,7 @@ function Summary() {
   };
 
   return (
-    <Layout title={"Resumen"}>
+    <Dash title={"Resumen"}>
       <Container>
         <div className="espaciosDeTrabajo">
           <div className="leaveBox">
@@ -39,9 +39,7 @@ function Summary() {
                 gap: "10px",
               }}
             >
-              <Separator />
               <div className="mediumText">Procentage_de_Progreso</div>
-              <Separator />
             </div>
             <div className="sss">
               {workspace.map((s) => (
@@ -60,9 +58,7 @@ function Summary() {
                 gap: "10px",
               }}
             >
-              <Separator />
               <div className="mediumText">Tareas_Pendientes</div>
-              <Separator />
             </div>
 
             <div className="pplasjdfs">
@@ -86,9 +82,7 @@ function Summary() {
                 gap: "10px",
               }}
             >
-              <Separator />
               <div className="mediumText">Notas_Recientes</div>
-              <Separator />
             </div>
             <div className="porqwuno">
               {selectNotes(space).map((n) => (
@@ -106,7 +100,7 @@ function Summary() {
           <></>
         )}
       </Container>
-    </Layout>
+    </Dash>
   );
 }
 

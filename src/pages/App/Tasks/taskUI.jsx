@@ -27,38 +27,34 @@ function TaskUI() {
   return (
     <Container>
       <SelectorSpace />
-      <Separator />
       <WorkSpace>
         <TaskStatus mySpace={space} />
         <TaskFinder />
-        <ContainerTasks>
-          <GeneralList>
-            {generalStatus.map((status) => (
-              <TaskList key={status.id}>
-                <div>{status.name}</div>
-                <Separator />
-
-                <div className="list">
-                  {taskLoading ? (
-                    <TaskLoading />
-                  ) : taskError ? (
-                    <TaskError />
-                  ) : !taskLoading && selectTask(space).length === 0 ? (
-                    <TaskEmpty />
-                  ) : (
-                    selectTask(space).map((t) =>
-                      t.status === status.id ? (
-                        <Task key={t.id} task={t} />
-                      ) : (
-                        <></>
-                      )
+        <GeneralList>
+          {generalStatus.map((status) => (
+            <TaskList key={status.id}>
+              <div>{status.name}</div>
+              <Separator />
+              <div className="list">
+                {taskLoading ? (
+                  <TaskLoading />
+                ) : taskError ? (
+                  <TaskError />
+                ) : !taskLoading && selectTask(space).length === 0 ? (
+                  <TaskEmpty />
+                ) : (
+                  selectTask(space).map((t) =>
+                    t.status === status.id ? (
+                      <Task key={t.id} task={t} />
+                    ) : (
+                      <></>
                     )
-                  )}
-                </div>
-              </TaskList>
-            ))}
-          </GeneralList>
-        </ContainerTasks>
+                  )
+                )}
+              </div>
+            </TaskList>
+          ))}
+        </GeneralList>
       </WorkSpace>
       <CBotton setOpenModal={setOpenModal} title="Nueva" />
       {openModal ? (
@@ -128,29 +124,8 @@ export const ContainerStatus = styled.div`
   }
 `;
 
-export const ContainerTasks = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  height: calc(100% - 50px);
-  width: 100%;
-  border-radius: 8px;
-
-  @media screen and (max-width: 1024px) {
-  }
-
-  @media screen and (max-width: 768px) {
-  }
-
-  @media screen and (max-width: 600px) {
-  }
-`;
-
 export const GeneralList = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   justify-content: flex-start;
   gap: 10px;
   height: 100%;

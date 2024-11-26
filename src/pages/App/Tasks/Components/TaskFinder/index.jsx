@@ -2,15 +2,15 @@ import React from "react";
 import { Context } from "../../../../../Context";
 
 function TaskFinder() {
-  const { searchValue, setSearchValue } = React.useContext(Context);
+  const { searchTasks, setSearchTasks } = React.useContext(Context);
 
   return (
     <input
       placeholder="... Buscar entre tus tareas... "
       className="TodoSearch generalText"
-      value={searchValue}
+      value={searchTasks}
       onChange={(event) => {
-        setSearchValue(event.target.value);
+        setSearchTasks(event.target.value);
       }}
     />
   );

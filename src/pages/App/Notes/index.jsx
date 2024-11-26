@@ -1,15 +1,15 @@
 import React from "react";
-import { Layout } from "../../../layout/Dashboard";
-import NotesUI from "./notesUI";
+import { Dash } from "../../../layout/Dash";
 import { ContextProvider } from "../../../Context";
+import NotesUI from "./notesUI";
 
 function Notes() {
   return (
-    <Layout title={"Notas"}>
+    <Dash title={"Notas"}>
       <ContextProvider>
         <NotesUI />
       </ContextProvider>
-    </Layout>
+    </Dash>
   );
 }
 

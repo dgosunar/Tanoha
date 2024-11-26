@@ -1,15 +1,15 @@
 import React from "react";
-import { Layout } from "../../../layout/Dashboard";
+import { Dash } from "../../../layout/Dash";
 import { ContextProvider } from "../../../Context";
 import SpaceUI from "./spaceUI";
 
 function SpaceWork() {
   return (
-    <Layout title={"Espacios de Trabajo"}>
+    <Dash title={"Espacios de Trabajo"}>
       <ContextProvider>
         <SpaceUI />
       </ContextProvider>
-    </Layout>
+    </Dash>
   );
 }
 export default SpaceWork;

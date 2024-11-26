@@ -46,11 +46,9 @@ function Navbar() {
   return (
     <>
       {isLogin ? (
-        <div className="dashContainer">
-          <div className="header">
-            <DeskNav titles={titlesOn} />
-            <DashNav titles={titlesOn} />
-          </div>
+        <div className="header">
+          <DeskNav titles={titlesOn} />
+          <DashNav titles={titlesOn} />
         </div>
       ) : (
         <div className="header">

@@ -36,8 +36,8 @@ function ContextProvider({ children }) {
     loading,
     error,
     selectTask,
-    searchValue,
-    setSearchValue,
+    searchTasks,
+    setSearchTasks,
     totalTask,
     totalPending,
     totalCompleted,
@@ -72,6 +72,8 @@ function ContextProvider({ children }) {
     showEdit,
     setShowEdit,
     upDateNote,
+    searchNotes,
+    setSearchNotes,
   } = noteFunctions;
 
   const spaceFunctions = useSpaceFunctions(
@@ -109,8 +111,8 @@ function ContextProvider({ children }) {
         loading,
         error,
         selectTask,
-        searchValue,
-        setSearchValue,
+        searchTasks,
+        setSearchTasks,
         totalTask,
         totalPending,
         totalCompleted,
@@ -142,6 +144,8 @@ function ContextProvider({ children }) {
         showEdit,
         setShowEdit,
         upDateNote,
+        searchNotes,
+        setSearchNotes,
 
         workspace,
         workspaceLoading,

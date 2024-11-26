@@ -29,11 +29,11 @@ img {
 :root {
   --default-background-color: #ffffff;
 
-  --gray: #A5A5A5;
+  --gray: #a5a5a5;
   --gray-light: #cbcbcb;
   --gray-dark: #424242;
   --black: #000000;
-  --white: #ffffff;
+  --white: #f6f8f6;
 
   --primary-main: #042042;
   --primary-light: #274471;
@@ -41,12 +41,12 @@ img {
   --secondary-main: #4b6a98;
   --secondary-light: #6b92c3;
 
-  --accent-red: #F16767;
-  --accent-yellow: #F1CF67;
-  --accent-green: #78F167;
-  --accent-blue: #68D6F1;
-  --accent-purple: #7867F1;
-  --accent-pink: #F167E0;
+  --accent-red: #f16767;
+  --accent-yellow: #f1cf67;
+  --accent-green: #78f167;
+  --accent-blue: #68d6f1;
+  --accent-purple: #7867f1;
+  --accent-pink: #f167e0;
 }
 
 .primaryTitle {
@@ -113,7 +113,6 @@ img {
   line-height: normal;
 }
 
-
 .sss {
   display: flex;
   gap: 10px;
@@ -153,7 +152,6 @@ img {
   justify-content: space-between;
   flex-direction: row;
 }
-
 
 .pplasjdfs {
   display: flex;

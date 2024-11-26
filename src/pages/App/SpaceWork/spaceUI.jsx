@@ -28,8 +28,6 @@ function SpaceUI() {
 
   return (
     <Container>
-      <Separator />
-
       <div className="workspace">
         {workspace.map((s) => (
           <div className="space" key={s.id}>

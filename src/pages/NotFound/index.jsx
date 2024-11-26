@@ -1,9 +1,9 @@
 import React from "react";
-import { Layout } from "../../layout/Home";
 import styled from "styled-components";
 import "./../../Styles/index.css";
 import { PBotton } from "../../Components/Bottons";
 import { useNavigate } from "react-router-dom";
+import { Layout } from "../../layout";
 
 function NotFound() {
   const navigate = useNavigate();

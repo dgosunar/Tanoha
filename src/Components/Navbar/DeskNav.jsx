@@ -25,7 +25,7 @@ function DeskNav({ titles }) {
 
   return (
     <Nav>
-      <div className="deskMenu">
+      <DeskMenu>
         {titles.map((t) => (
           <NavLink
             to={t.route}
@@ -34,10 +34,10 @@ function DeskNav({ titles }) {
               isActive ? "itemSelected miniText" : "miniText"
             }
           >
-            <div className="item">{t.label}</div>
+            <div className="item miniText">{t.label}</div>
           </NavLink>
         ))}
-      </div>
+      </DeskMenu>
       {isLogin ? (
         <SBotton onClick={logOut}>Salir</SBotton>
       ) : (
@@ -59,4 +59,13 @@ export const Nav = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
+`;
+
+export const DeskMenu = styled.div`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary-main);
 `;

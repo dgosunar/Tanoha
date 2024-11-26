@@ -1,6 +1,6 @@
 import React from "react";
-import { Layout } from "../../../layout/Home";
 import styled from "styled-components";
+import { Layout } from "../../../layout";
 
 function Contact() {
   return (

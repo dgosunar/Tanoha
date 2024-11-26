@@ -37,16 +37,14 @@ export default ContactCard;
 
 export const Card = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   width: 400px;
-  background-color: var(--white);
-  color: var(--black);
   padding: 10px;
-  gap: 10px;
-  border-radius: 8px;
+  border-radius: 21px;
+  background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0px 4px 10px 0px var(--black);
+  backdrop-filter: blur(4px);
+  color: var(--black);
 
   @media screen and (max-width: 1024px) {
   }
@@ -55,8 +53,7 @@ export const Card = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    width: 100%;
-    margin: 10px;
+    max-width: 100%;
   }
 `;
 
@@ -64,13 +61,8 @@ export const MyPresentation = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   gap: 10px;
   width: 100%;
-
-  & img {
-    border-radius: 8px;
-  }
 
   @media screen and (max-width: 1024px) {
   }
@@ -86,11 +78,6 @@ export const SocialNetworks = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-
-  & img {
-    height: 30px;
-    border-radius: 0px;
-  }
 
   @media screen and (max-width: 1024px) {
   }

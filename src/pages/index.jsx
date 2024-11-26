@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Layout } from "../layout/Home";
 import { PBotton } from "../Components/Bottons";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../Context";
+import { Layout } from "../layout";
 
 function Home() {
   const { setIsLogin } = React.useContext(Context);
@@ -27,9 +27,9 @@ function Home() {
           <div className="secondarySubtitle">
             Pequeños hábitos, grandes victorias
           </div>
-          <div style={{ margin: "20px" }}></div>
-          <PBotton onClick={logIn}>Ingresar</PBotton>
         </LogoBox>
+        <PBotton onClick={logIn}>Ingresar</PBotton>
+        <div style={{ margin: "17px" }}></div>
       </Container>
     </Layout>
   );
@@ -39,8 +39,8 @@ export default Home;
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -54,12 +54,5 @@ export const LogoBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   text-align: center;
-  width: 50%;
-
-  @media screen and (max-width: 768px) {
-    height: 50%;
-    width: 100%;
-  }
 `;

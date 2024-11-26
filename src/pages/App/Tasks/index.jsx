@@ -1,12 +1,12 @@
 import React from "react";
-import { Layout } from "../../../layout/Dashboard";
+import { Dash } from "../../../layout/Dash";
 import TaskUI from "./taskUI";
 
 function Tasks() {
   return (
-    <Layout title={"Tareas"}>
+    <Dash title={"Tareas"}>
       <TaskUI />
-    </Layout>
+    </Dash>
   );
 }
 

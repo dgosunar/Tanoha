@@ -11,6 +11,7 @@ import { NoteDetails } from "./Mods/NoteDetails";
 import { NoteEdit } from "./Mods/NoteEdit";
 import { SelectorSpace } from "../../../Components/SelectorSpace";
 import { Note } from "./Components/Note";
+import { NoteFinder } from "./Components/NoteFinder";
 
 function NotesUI() {
   const {
@@ -37,7 +38,7 @@ function NotesUI() {
   return (
     <Container>
       <SelectorSpace />
-      <Separator />
+      <NoteFinder />
 
       <div className="generalNotes">
         {notesLoading ? (

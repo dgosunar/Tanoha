@@ -23,8 +23,6 @@ const useNoteFunctions = () => {
     recentNotesError,
   } = useLocalStorage("Recent_Note_v1", {});
 
-  console.log(recentNotes);
-
   const [notesDetails, setNotesDetails] = React.useState([]);
   const [showDetails, setShowDetails] = React.useState(false);
   const [showEdit, setShowEdit] = React.useState(false);
@@ -32,8 +30,15 @@ const useNoteFunctions = () => {
   // ==============================================================
   //Filtrador de notas ============================================
 
+  const [searchNotes, setSearchNotes] = React.useState("");
+
+  const searchNote = () =>
+    allNotes.filter((n) =>
+      n.title.toLowerCase().includes(searchNotes.toLowerCase())
+    );
+
   const selectNotes = (spaceId) =>
-    allNotes.filter((n) => n.workspace === spaceId);
+    searchNote().filter((n) => n.workspace === spaceId);
 
   // ==============================================================
   // Cantidad de tareas por Espacio de Trabajo ====================
@@ -87,6 +92,8 @@ const useNoteFunctions = () => {
     showEdit,
     setShowEdit,
     upDateNote,
+    searchNotes,
+    setSearchNotes,
   };
 };
 
