@@ -107,10 +107,19 @@
   border-radius: 16px;
 }
 
-.dashitemSelected {
+.dashItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  height: 24px;
+}
+
+.dashItemSelected {
   color: var(--secondary-main);
   height: 100%;
-  border-top: 2px solid var(--secondary-main);
 }
 
 .xBotton {
@@ -136,7 +145,6 @@
   z-index: 30;
   width: 100%;
   height: 100%;
-  background: var(--primary-main);
   color: var(--white);
   align-items: center;
   gap: 75px;
@@ -154,7 +162,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .item {
+  .dashItem {
     width: calc(100% / 5);
     height: 100%;
   }

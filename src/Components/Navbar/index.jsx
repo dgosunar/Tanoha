@@ -2,7 +2,7 @@ import React from "react";
 import "../../Styles/generalStyles.css";
 import "./navStyles.css";
 import { DeskNav } from "./DeskNav";
-import { MobNav } from "./MobNav";
+import { MobileNav } from "./MobileNav";
 import { Context } from "../../Context";
 import { useNavigate } from "react-router-dom";
 import { DashNav } from "./DashNav";
@@ -45,17 +45,19 @@ function Navbar() {
 
   return (
     <>
-      {isLogin ? (
-        <div className="header">
-          <DeskNav titles={titlesOn} />
-          <DashNav titles={titlesOn} />
-        </div>
-      ) : (
-        <div className="header">
-          <DeskNav titles={titlesOff} />
-          <MobNav titles={titlesOff} />
-        </div>
-      )}
+      <div className="header">
+        {isLogin ? (
+          <>
+            <DeskNav titles={titlesOn} />
+            <DashNav titles={titlesOn} />
+          </>
+        ) : (
+          <>
+            <DeskNav titles={titlesOff} />
+            <MobileNav titles={titlesOff} />
+          </>
+        )}
+      </div>
     </>
   );
 }

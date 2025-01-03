@@ -8,7 +8,7 @@ import { TBotton, SBotton } from "../Bottons";
 import { Context } from "../../Context";
 import { useNavigate } from "react-router-dom";
 
-function MobNav({ titles }) {
+function MobileNav({ titles }) {
   const { isLogin, setIsLogin } = React.useContext(Context);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,7 @@ function MobNav({ titles }) {
   };
   return (
     <Nav>
-      <GrMenu
+      {/* <GrMenu
         className={isOpen ? "burguerButton open" : "burguerButton"}
         onClick={handleClick}
       />
@@ -41,8 +41,8 @@ function MobNav({ titles }) {
       <div
         className={isOpen ? "background open" : "background"}
         onClick={handleClick}
-      />
-      <div className={isOpen ? "mobMenu open" : "mobMenu"}>
+      /> */}
+      <div className={/* isOpen ? "mobMenu open" : "mobMenu"*/ "mobMenu open"}>
         <div className="itemList">
           {titles.map((t) => (
             <NavLink
@@ -68,12 +68,20 @@ function MobNav({ titles }) {
   );
 }
 
-export { MobNav };
+export { MobileNav };
 
 export const Nav = styled.div`
   display: none;
+
   @media screen and (max-width: 768px) {
-    height: 100%;
     display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  }
+
+  @media screen and (min-width: 1025px) {
   }
 `;

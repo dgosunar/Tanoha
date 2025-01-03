@@ -38,7 +38,7 @@ function DashNav({ titles }) {
               to={t.route}
               key={t.label}
               className={({ isActive }) =>
-                isActive ? "dashitemSelected item" : "item"
+                isActive ? "dashItemSelected dashItem" : "dashItem"
               }
             >
               <FontAwesomeIcon icon={t.icon} size="xl" />
@@ -55,9 +55,10 @@ export { DashNav };
 
 export const Nav = styled.div`
   display: none;
-  height: 100%;
-  width: 100%;
+
   @media screen and (max-width: 768px) {
     display: flex;
+    height: 100%;
+    width: 100%;
   }
 `;
