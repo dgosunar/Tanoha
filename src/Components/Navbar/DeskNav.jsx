@@ -16,7 +16,7 @@ function DeskNav({ titles }) {
 
   const logOut = () => {
     setIsLogin(false);
-    redirecionar("/Tanoha/");
+    redirecionar("/Tanoha/home");
   };
   const logIn = () => {
     setIsLogin(true);

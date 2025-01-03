@@ -7,7 +7,7 @@ import { Layout } from "../../layout";
 
 function NotFound() {
   const navigate = useNavigate();
-  const redi = () => navigate("/Tanoha/");
+  const redi = () => navigate("/Tanoha/home");
   return (
     <Layout>
       <Container>

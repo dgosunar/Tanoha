@@ -10,13 +10,13 @@ import Notes from "./pages/App/Notes";
 import SpaceWork from "./pages/App/SpaceWork";
 import Habits from "./pages/App/Habits";
 import NotFound from "./pages/NotFound";
+import NotFound2 from "./pages/NotFound2";
 
 import "./Styles/App.css";
-import NotFound2 from "./pages/NotFound2";
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: "/Tanoha/", element: <Home /> },
+    { path: "/Tanoha/home", element: <Home /> },
     { path: "/Tanoha/contact", element: <Contact /> },
     { path: "/Tanoha/*", element: <NotFound /> },
     { path: "/*", element: <NotFound2 /> },
