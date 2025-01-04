@@ -22,7 +22,7 @@ function MobileNav({ titles }) {
 
   const logOut = () => {
     setIsLogin(false);
-    redirecionar("/Tanoha/home");
+    redirecionar("/Tanoha/");
   };
   const logIn = () => {
     setIsLogin(true);
@@ -30,7 +30,7 @@ function MobileNav({ titles }) {
   };
   return (
     <Nav>
-      {/* <GrMenu
+      <GrMenu
         className={isOpen ? "burguerButton open" : "burguerButton"}
         onClick={handleClick}
       />
@@ -41,8 +41,8 @@ function MobileNav({ titles }) {
       <div
         className={isOpen ? "background open" : "background"}
         onClick={handleClick}
-      /> */}
-      <div className={/* isOpen ? "mobMenu open" : "mobMenu"*/ "mobMenu open"}>
+      />
+      <div className={isOpen ? "mobMenu open" : "mobMenu"}>
         <div className="itemList">
           {titles.map((t) => (
             <NavLink

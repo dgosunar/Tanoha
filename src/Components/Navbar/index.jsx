@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const titlesOff = [
-  { label: "Inicio", route: "/Tanoha/home" },
+  { label: "Inicio", route: "/Tanoha/" },
   { label: "Contacto", route: "/Tanoha/contact" },
 ];
 const titlesOn = [
@@ -41,7 +41,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   const redi = () =>
-    isLogin ? navigate("/Tanoha/summary") : navigate("/Tanoha/home");
+    isLogin ? navigate("/Tanoha/summary") : navigate("/Tanoha/");
 
   return (
     <>

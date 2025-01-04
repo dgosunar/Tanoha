@@ -16,7 +16,7 @@ import "./Styles/App.css";
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: "/Tanoha/home", element: <Home /> },
+    { path: "/Tanoha/", element: <Home /> },
     { path: "/Tanoha/contact", element: <Contact /> },
     { path: "/Tanoha/*", element: <NotFound /> },
     { path: "/*", element: <NotFound2 /> },

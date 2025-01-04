@@ -23,7 +23,7 @@ function DashNav({ titles }) {
 
   const logOut = () => {
     setIsLogin(false);
-    redirecionar("/Tanoha/home");
+    redirecionar("/Tanoha/");
   };
   const logIn = () => {
     setIsLogin(true);

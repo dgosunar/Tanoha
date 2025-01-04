@@ -28,6 +28,7 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
     width: calc(100% - 60px);
     padding: 10px 30px 0px 30px;
   }
