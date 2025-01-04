@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Tanoha/static/css/main.7f408cd3.css",
-    "main.js": "/Tanoha/static/js/main.e249aa48.js",
+    "main.js": "/Tanoha/static/js/main.674ae224.js",
     "static/js/453.1c3173f4.chunk.js": "/Tanoha/static/js/453.1c3173f4.chunk.js",
     "index.html": "/Tanoha/index.html",
     "main.7f408cd3.css.map": "/Tanoha/static/css/main.7f408cd3.css.map",
-    "main.e249aa48.js.map": "/Tanoha/static/js/main.e249aa48.js.map",
+    "main.674ae224.js.map": "/Tanoha/static/js/main.674ae224.js.map",
     "453.1c3173f4.chunk.js.map": "/Tanoha/static/js/453.1c3173f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f408cd3.css",
-    "static/js/main.e249aa48.js"
+    "static/js/main.674ae224.js"
   ]
 }
