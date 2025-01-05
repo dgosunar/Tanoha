@@ -25,16 +25,14 @@ export const CreateTodoButton = styled.div`
   right: 120px;
 
   @media screen and (max-width: 1024px) {
-    right: 60px;
+    right: 0px;
   }
 
   @media screen and (max-width: 800px) {
-    bottom: 60px;
-    right: 10px;
   }
-  @media screen and (max-width: 600px) {
-    bottom: 60px;
-    right: 10px;
+  @media screen and (max-width: 768px) {
+    bottom: 0px;
+    right: calc((100% / 2) - 35px);
   }
 `;
 
@@ -45,7 +43,7 @@ export const PlusBotton = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 `;

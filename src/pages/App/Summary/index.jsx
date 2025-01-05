@@ -113,7 +113,7 @@ export const Container = styled.div`
   width: 100%;
   justify-content: flex-start;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
   }
 
   .leaveBox {
@@ -126,7 +126,7 @@ export const Container = styled.div`
 
     @media screen and (max-width: 800px) {
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
     }
   }
 
@@ -139,7 +139,7 @@ export const Container = styled.div`
     @media screen and (max-width: 800px) {
       width: 50%;
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
     }
   }

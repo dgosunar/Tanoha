@@ -28,7 +28,7 @@ export const Container = styled.div`
   border-radius: 8px;
   box-shadow: 0px 4px 10px 0px var(--black);
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     width: calc(100% - 50px);
   }
 `;

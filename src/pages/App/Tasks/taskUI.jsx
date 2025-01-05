@@ -81,7 +81,7 @@ export const Container = styled.div`
   @media screen and (max-width: 768px) {
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
   }
 `;
 
@@ -102,7 +102,7 @@ export const WorkSpace = styled.div`
   @media screen and (max-width: 768px) {
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
   }
 `;
 
@@ -120,7 +120,7 @@ export const ContainerStatus = styled.div`
   @media screen and (max-width: 768px) {
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
   }
 `;
 
@@ -139,7 +139,7 @@ export const GeneralList = styled.div`
   @media screen and (max-width: 768px) {
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     justify-content: flex-start;
   }
 `;
@@ -166,7 +166,7 @@ export const TaskList = styled.div`
     width: calc(100% - 20px);
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     min-width: 350px;
   }
 

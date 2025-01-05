@@ -55,7 +55,7 @@ export const CardDetails = styled.div`
   border-radius: 21px;
   padding: 8px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     width: calc(100% - 50px);
   }
 `;

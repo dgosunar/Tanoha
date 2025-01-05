@@ -17,25 +17,26 @@ export { Layout };
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: calc(100% - 10px);
+  height: calc(100% - 20px);
   width: calc(100% - 240px);
-  padding: 10px 120px 0px 120px;
+  padding: 10px 120px 10px 120px;
   gap: 10px;
 
   @media screen and (max-width: 1024px) {
     width: calc(100% - 120px);
-    padding: 10px 60px 0px 60px;
+    padding: 10px 60px 10px 60px;
   }
 
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
     width: calc(100% - 60px);
-    padding: 10px 30px 0px 30px;
+    padding: 10px 30px 10px 30px;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
     width: calc(100% - 20px);
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 10px 10px;
   }
 `;
 

@@ -52,7 +52,7 @@ export const Card = styled.div`
   @media screen and (max-width: 768px) {
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     max-width: 100%;
   }
 `;
@@ -70,7 +70,7 @@ export const MyPresentation = styled.div`
   @media screen and (max-width: 768px) {
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
   }
 `;
 
@@ -85,6 +85,6 @@ export const SocialNetworks = styled.div`
   @media screen and (max-width: 768px) {
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
   }
 `;

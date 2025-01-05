@@ -29,15 +29,12 @@ export const DashContainer = styled.div`
   overflow-y: hidden;
 
   @media screen and (max-width: 1024px) {
-    padding: 65px 60px 15px 60px;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 15px 30px 65px 30px;
   }
 
-  @media screen and (max-width: 600px) {
-    padding: 15px 15px 65px 15px;
+  @media screen and (max-width: 768px) {
   }
 `;
 

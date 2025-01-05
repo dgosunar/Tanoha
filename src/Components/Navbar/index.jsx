@@ -21,13 +21,13 @@ const titlesOff = [
 const titlesOn = [
   { label: "Resumen", route: "/Tanoha/summary", icon: faHouse },
   { label: "Tareas", route: "/Tanoha/tasks", icon: faSquareCheck },
-  { label: "Notas", route: "/Tanoha/notes", icon: faNoteSticky },
-  { label: "Habitos", route: "/Tanoha/habits", icon: faClipboardList },
   {
     label: "Perfil",
     route: "/Tanoha/space",
     icon: faUser,
   },
+  { label: "Notas", route: "/Tanoha/notes", icon: faNoteSticky },
+  { label: "Habitos", route: "/Tanoha/habits", icon: faClipboardList },
   // {
   //   label: "Espacios de Trabajo",
   //   route: "/Tanoha/space",
