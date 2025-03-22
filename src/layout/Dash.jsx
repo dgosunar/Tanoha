@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Navbar } from "../Components/Navbar";
-import { BgDashboard } from "../Components/Backgrounds/BgDashboard";
 import { Layout } from ".";
 import { Separator } from "../Components/Modals/Separator";
 
@@ -26,7 +24,7 @@ export const DashContainer = styled.div`
   height: 100%;
   width: 100%;
   color: var(--white);
-  overflow-y: hidden;
+  overflow: hidden;
 
   @media screen and (max-width: 1024px) {
   }
@@ -48,6 +46,7 @@ export const Title = styled.div`
 export const Content = styled.div`
   display: flex;
   width: 100%;
-  min-height: calc(100% - 60px);
+  min-height: calc(100% - 51px);
   justify-content: center;
+  overflow: auto;
 `;

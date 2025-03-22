@@ -63,11 +63,9 @@ export const CardDetails = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  height: 75vh;
+  height: 90vh;
   width: 100%;
   gap: 10px;
 
@@ -87,14 +85,14 @@ export const Form = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100% - 44px);
   gap: 10px;
 
   .titleStyle {
     display: flex;
     margin: 0;
     padding: 0 10px;
-    width: calc(100% - 50px);
+    width: calc(100% - 60px);
     text-align: center;
   }
 

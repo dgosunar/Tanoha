@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #001724;
+  background-color: #042042;
   color: var(--white);
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
@@ -27,7 +27,7 @@ img {
 }
 
 :root {
-  --default-background-color: #ffffff;
+  --default-background-color: #042042;
 
   --gray: #a5a5a5;
   --gray-light: #cbcbcb;
@@ -51,33 +51,33 @@ img {
 
 .primaryTitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 41px;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
 }
 
 .secondaryTitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 40px;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
 }
 
 .primarySubtitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
 }
 
 .secondarySubtitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
 }
 
@@ -93,7 +93,7 @@ img {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
 }
 
@@ -101,98 +101,30 @@ img {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.generalTextB {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
   line-height: normal;
 }
 
 .miniText {
   font-family: "Montserrat", sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
 }
 
-.sss {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  height: 135px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  padding-bottom: 10px;
-}
-
-.asdaq {
-  display: flex;
-  height: calc(100% - 10px);
-  width: 220px;
-  min-width: 220px;
-  box-shadow: 0px 4px 10px 0px var(--black);
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  border-radius: 21px;
-  padding: 8px;
-}
-
-.aaa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.asdasd {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  gap: 10px;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.pplasjdfs {
-  display: flex;
-  height: calc(100% - 25px);
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-}
-
-.espaciosDeTrabajo {
-  display: flex;
-  width: 100%;
-  height: fit-content;
-}
-
-.tareasPendientes {
-  display: flex;
-  width: 100%;
-  height: calc(100% - 525px);
-}
-
-.notasRecientes {
-  display: flex;
-  width: 100%;
-  height: 400px;
-}
-
-.porcentaje {
-  display: flex;
-  position: absolute;
-  height: fit-content;
-  bottom: 30px;
-}
-
-.porqwuno {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  height: 100%;
-  overflow-x: auto;
-  scrollbar-width: none;
-  padding-bottom: 10px;
+.miniTextB {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }

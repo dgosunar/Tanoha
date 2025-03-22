@@ -1,26 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { PBotton } from "../Components/Bottons";
+import { BottonBox, SBotton, TBotton } from "../Components/Bottons";
 import { useNavigate } from "react-router-dom";
-import { Context } from "../Context";
 import { Layout } from "../layout";
 
 function Home() {
-  const { setIsLogin } = React.useContext(Context);
   const navigate = useNavigate();
 
   const redirecionar = (dirección) => navigate(dirección);
 
   const logIn = () => {
-    setIsLogin(true);
-    redirecionar("/Tanoha/summary");
+    redirecionar("/Tanoha/login");
+  };
+  const singUp = () => {
+    redirecionar("/Tanoha/singup");
   };
 
   return (
     <Layout>
       <Container>
         <LogoBox>
-          <img src="./Logos/CompletLogoLight.png" alt="imagotipo" />
+          <img
+            style={{ filter: "drop-shadow(5px 5px 10px black)" }}
+            src="./Logos/CompletLogoLight.png"
+            alt="imagotipo"
+          />
           <div className="secondarySubtitle">
             Gestiona tus tareas, conquista tus metas
           </div>
@@ -28,8 +32,10 @@ function Home() {
             Pequeños hábitos, grandes victorias
           </div>
         </LogoBox>
-        <PBotton onClick={logIn}>Ingresar</PBotton>
-        <div style={{ margin: "17px" }}></div>
+        <BottonBox style={{ filter: "drop-shadow(5px 5px 10px black)" }}>
+          <TBotton onClick={logIn}>Ingresar</TBotton>
+          <SBotton onClick={singUp}>Registrase</SBotton>
+        </BottonBox>
       </Container>
     </Layout>
   );
@@ -55,4 +61,6 @@ export const LogoBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
+  gap: 10px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
 `;

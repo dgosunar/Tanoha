@@ -79,12 +79,10 @@ function SpaceUI() {
       </div>
       <div>
         <CBotton setOpenModal={setOpenModal} title="+" />
-        {openModal ? (
+        {openModal && (
           <Modal>
             <NewSpace />
           </Modal>
-        ) : (
-          <></>
         )}
       </div>
     </Container>

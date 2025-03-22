@@ -81,5 +81,4 @@ export const BottonBox = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 10px 20px;
 `;

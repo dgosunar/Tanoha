@@ -2,35 +2,33 @@ import React from "react";
 import styled from "styled-components";
 import Label from "./Label";
 
-export default function TextArea({
-  label,
-  placeholder,
-  rows,
-  defaultValue,
-  setText,
-}) {
+export default function Password({ label, placeholder, setPassword }) {
   return (
     <Label label={label}>
-      <TextAreaStyle
-        className="generalText"
+      <PasswordStyle
         placeholder={placeholder}
-        defaultValue={defaultValue}
-        rows={rows}
+        className="generalText"
+        type="password"
         onChange={(event) => {
-          setText(event.target.value);
+          setPassword(event.target.value);
         }}
       />
     </Label>
   );
 }
 
-// <TextArea label={"Nombre"} placeholder={"Pedro, Juan..."} />
+// <Password
+//  label={"Repetir Contraseña"}
+//  placeholder={"***************"}
+// />;
 
-export const TextAreaStyle = styled.textarea`
+export const PasswordStyle = styled.input`
   display: flex;
   width: calc(100% - 22px);
+  height: 18px;
   padding: 10px;
   margin-top: -10px;
+  text-align: center;
   background-color: var(--white);
   border: 1px solid var(--gray-light);
   border-radius: 21px;

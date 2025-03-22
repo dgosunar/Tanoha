@@ -1,12 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 
-function DataSearch() {
-  const { searchValue, setSearchValue } = React.useContext(Context);
-  l.placeholder = "... Buscar entre tus tareas... ";
+export default function DataSearch({
+  placeholder,
+  searchValue,
+  setSearchValue,
+}) {
   return (
-    <input
+    <InputStyle
       placeholder={placeholder}
-      className="TodoSearch generalText"
+      className="generalText"
       value={searchValue}
       onChange={(event) => {
         setSearchValue(event.target.value);
@@ -15,4 +18,27 @@ function DataSearch() {
   );
 }
 
-export { DataSearch };
+// <DataSearch
+//   placeholder={"Buscar"}
+//   searchValue={searchValue}
+//   setSearchValue={setSearchValue}
+// />
+
+export const InputStyle = styled.input`
+  display: flex;
+  width: calc(100% - 22px);
+  height: 18px;
+  padding: 10px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: 21px;
+  resize: none;
+  overflow: auto;
+  scrollbar-width: none;
+  text-align: center;
+
+  &:focus-visible {
+    outline: none;
+    border: 1px solid var(--secondary-main);
+  }
+`;

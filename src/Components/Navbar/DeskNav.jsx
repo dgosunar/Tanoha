@@ -19,8 +19,7 @@ function DeskNav({ titles }) {
     redirecionar("/Tanoha/");
   };
   const logIn = () => {
-    setIsLogin(true);
-    redirecionar("/Tanoha/summary");
+    redirecionar("/Tanoha/login");
   };
 
   return (

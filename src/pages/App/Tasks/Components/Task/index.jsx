@@ -51,7 +51,7 @@ export const Container = styled.div`
   min-height: 40px;
   padding: 0 10px;
   width: calc(100% - 20px);
-  border-radius: 15px;
+  border-radius: 16px;
   outline-offset: -4px;
   background-color: var(--white);
   gap: 10px;

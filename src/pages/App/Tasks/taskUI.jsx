@@ -1,8 +1,8 @@
 import React from "react";
 import { Context } from "../../../Context";
-import { SelectorSpace } from "../../../Components/SelectorSpace";
 import { Separator } from "../../../Components/Modals/Separator";
-import { TaskFinder } from "./Components/TaskFinder";
+import { SelectorSpace } from "../../../Components/SelectorSpace";
+import DataSearch from "../../../Components/Inputs/DataSearch";
 import { TaskLoading } from "./Components/Task/TaskLoading";
 import { TaskError } from "./Components/Task/TaskError";
 import { TaskEmpty } from "./Components/Task/TaskEmpty";
@@ -22,6 +22,8 @@ function TaskUI() {
     setOpenModal,
     selectTask,
     space,
+    searchTasks,
+    setSearchTasks,
   } = React.useContext(Context);
 
   return (
@@ -29,7 +31,11 @@ function TaskUI() {
       <SelectorSpace />
       <WorkSpace>
         <TaskStatus mySpace={space} />
-        <TaskFinder />
+        <DataSearch
+          placeholder={"... Buscar entre tus tareas... "}
+          searchValue={searchTasks}
+          setSearchValue={setSearchTasks}
+        />
         <GeneralList>
           {generalStatus.map((status) => (
             <TaskList key={status.id}>
@@ -43,13 +49,9 @@ function TaskUI() {
                 ) : !taskLoading && selectTask(space).length === 0 ? (
                   <TaskEmpty />
                 ) : (
-                  selectTask(space).map((t) =>
-                    t.status === status.id ? (
-                      <Task key={t.id} task={t} />
-                    ) : (
-                      <></>
-                    )
-                  )
+                  selectTask(space)
+                    .filter((t) => t.status === status.id)
+                    .map((t) => <Task key={t.id} task={t} />)
                 )}
               </div>
             </TaskList>
@@ -57,12 +59,10 @@ function TaskUI() {
         </GeneralList>
       </WorkSpace>
       <CBotton setOpenModal={setOpenModal} title="Nueva" />
-      {openModal ? (
+      {openModal && (
         <Modal>
           <NewTask />
         </Modal>
-      ) : (
-        <></>
       )}
     </Container>
   );
@@ -89,6 +89,7 @@ export const WorkSpace = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   height: calc(100% - 72px);
   gap: 10px;
 
@@ -126,7 +127,7 @@ export const ContainerStatus = styled.div`
 
 export const GeneralList = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
   height: 100%;
   width: 100%;

@@ -7,27 +7,18 @@ import { Card } from "../../../../Components/Modals/Card";
 import ReactDatePicker from "react-datepicker";
 import TextArea from "../../../../Components/Inputs/TextArea";
 import Select from "../../../../Components/Inputs/Select";
+import Date from "../../../../Components/Inputs/MyDate";
+import MyDate from "../../../../Components/Inputs/MyDate";
 
 function NewTask() {
-  const { setOpenModal, addTask, workspace } = React.useContext(Context);
+  const { setOpenModal, addTask, workspace, space } = React.useContext(Context);
 
   const [description, setDescription] = React.useState("");
   const [mySpace, setMySpace] = React.useState(0);
   const [date, setDate] = React.useState("");
 
   const onSubmit = () => {
-    const formattedDate = new Intl.DateTimeFormat("es", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      timeZone: "UTC",
-    }).format(date);
-    const myDate =
-      formattedDate === "01/01/1970, 00:00:00" ? " " : formattedDate;
-    addTask(description, mySpace, myDate);
+    addTask(description, mySpace, date);
     setOpenModal(false);
   };
 
@@ -35,15 +26,9 @@ function NewTask() {
     setOpenModal(false);
   };
 
-  const onChangeDescripcion = (event) => {
-    setDescription(event.target.value);
-  };
-
-  const onChangeSpace = (event) => {
-    const idCorrespondiente = workspace.findIndex(
-      (s) => s.name === event.target.value
-    );
-    setMySpace(idCorrespondiente);
+  const onChangeSpace = (nameSpace) => {
+    const id = workspace.findIndex((s) => s.name === nameSpace);
+    setMySpace(id);
   };
 
   return (
@@ -53,30 +38,18 @@ function NewTask() {
           <TextArea
             label={"Ingresa una nueva tarea"}
             placeholder={"Hacer..."}
-            onChange={onChangeDescripcion}
+            rows={"1"}
+            setText={setDescription}
           />
-
+          <MyDate label="Fecha Limite:" setDate={setDate} />
           <Select
             label={"Espacio de Trabajo"}
-            values={workspace}
-            onChange={onChangeSpace}
+            defaultValue={workspace[space].name}
+            values={workspace.map((w) => w.name)}
+            onChange={(event) => onChangeSpace(event.target.value)}
           />
-
-          <StatusBox>
-            <Label>Fecha Limite:</Label>
-            <ReactDatePicker
-              className="calendar generalText"
-              selected={date}
-              onChange={(date) => setDate(date)}
-              showTimeSelect
-              dateFormat="Pp"
-            />
-          </StatusBox>
-          <Details></Details>
+          <Details />
         </Form>
-
-        {/* <TextArea label={"Ingresa una nueva tarea"} />
-        <Select label={"Selecciona el Espacio de Trabajo"} /> */}
 
         <BottonBox>
           <SBotton onClick={onCancel}>Cancelar</SBotton>

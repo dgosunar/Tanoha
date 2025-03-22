@@ -4,9 +4,11 @@ import { Context } from "../../../../Context";
 import styled from "styled-components";
 import { PBotton, SBotton } from "../../../../Components/Bottons";
 import { Card } from "../../../../Components/Modals/Card";
+import TextArea from "../../../../Components/Inputs/TextArea";
+import Select from "../../../../Components/Inputs/Select";
 
 function NoteEdit() {
-  const { setShowEdit, notesDetails, upDateNote, workspace } =
+  const { setShowEdit, notesDetails, upDateNote, workspace, space } =
     React.useContext(Context);
 
   const [title, setTitle] = React.useState(notesDetails.title);
@@ -25,14 +27,6 @@ function NoteEdit() {
     setShowEdit(false);
   };
 
-  const onChangeTitle = (event) => {
-    setTitle(event.target.value);
-  };
-
-  const onChangeDescription = (event) => {
-    setDescription(event.target.value);
-  };
-
   const onChangeSpace = (event) => {
     const idCorrespondiente = workspace.findIndex(
       (s) => s.name === event.target.value
@@ -45,37 +39,26 @@ function NoteEdit() {
     <Card title="Editar Nota">
       <Container>
         <Form>
-          <TitleBox>
-            <Label>Titulo de la Nota</Label>
-            <textarea className="titleStyle" onChange={onChangeTitle}>
-              {title}
-            </textarea>
-          </TitleBox>
-          <DescriptionBox>
-            <Label>Descripción</Label>
-            <textarea
-              className="descriptionStyle"
-              onChange={onChangeDescription}
-            >
-              {description}
-            </textarea>
-          </DescriptionBox>
-          <Details>
-            <StatusBox>
-              <Label>Espacio de Trabajo</Label>
-              <select
-                className="status generalText"
-                value={nameSpace}
-                onChange={onChangeSpace}
-              >
-                {workspace.map((item) => (
-                  <option key={item.id} value={item.name}>
-                    {item.name}
-                  </option>
-                ))}
-              </select>
-            </StatusBox>
-          </Details>
+          <TextArea
+            label={"Titulo de la Nota"}
+            placeholder={"..."}
+            rows={"1"}
+            defaultValue={title}
+            setText={setTitle}
+          />
+          <TextArea
+            label={"Descripción"}
+            placeholder={"..."}
+            rows={"15"}
+            defaultValue={description}
+            setText={setDescription}
+          />
+          <Select
+            label={"Espacio de Trabajo"}
+            defaultValue={workspace[space].name}
+            values={workspace.map((w) => w.name)}
+            onChange={(event) => onChangeSpace(event.target.value)}
+          />
         </Form>
         <BottonBox>
           <SBotton onClick={onCancel}>Cancelar</SBotton>
@@ -93,9 +76,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 75vh;
   width: 100%;
   gap: 10px;
+  overflow: auto;
+  scrollbar-width: none;
 
   .contenido {
     display: flex;

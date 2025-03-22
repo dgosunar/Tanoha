@@ -1,15 +1,15 @@
 import React from "react";
 import { Dash } from "../../../layout/Dash";
 import { Context } from "../../../Context";
-import { TaskList } from "../Tasks/taskUI";
-import { Task } from "../Tasks/Components/Task";
 import styled from "styled-components";
 import { CBotton } from "../../../Components/Bottons/CBotton";
 import { NewTask } from "../Tasks/Mods/NewTask";
 import { Modal } from "../../../Components/Modals/Modal";
-import { Separator } from "../../../Components/Modals/Separator";
-import MyPieChart from "./Components/PieChar";
+import MyPieChart, { PieContainer } from "./Components/PieChar/MyPieChart";
 import { Note } from "../Notes/Components/Note";
+import { useNavigate } from "react-router-dom";
+import SummaryBox from "./Components/PieChar/SummaryBox";
+import TaskListComponent from "./Components/PieChar/TaskListComponent";
 
 function Summary() {
   const {
@@ -22,6 +22,17 @@ function Summary() {
     deleteNote,
   } = React.useContext(Context);
 
+  const navigate = useNavigate();
+  const redirecionar = (dirección) => navigate(dirección);
+  const toWorkspaces = () => {
+    redirecionar("/Tanoha/space");
+  };
+  const toTasks = () => {
+    redirecionar("/Tanoha/tasks");
+  };
+  const toNotes = () => {
+    redirecionar("/Tanoha/notes");
+  };
   const onDelete = (id) => {
     deleteNote(id);
   };
@@ -29,77 +40,44 @@ function Summary() {
   return (
     <Dash title={"Resumen"}>
       <Container>
-        <div className="espaciosDeTrabajo">
-          <div className="leaveBox">
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "10px",
-              }}
-            >
-              <div className="mediumText">Procentage_de_Progreso</div>
-            </div>
-            <div className="sss">
-              {workspace.map((s) => (
-                <MyPieChart space={s.id} label={s.name} />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="tareasPendientes">
-          <div className="leaveBox">
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "10px",
-              }}
-            >
-              <div className="mediumText">Tareas_Pendientes</div>
-            </div>
-
-            <div className="pplasjdfs">
-              <TaskList>
-                <div className="list">
-                  {task.map((t) =>
-                    t.status === 1 ? <Task key={t.id} task={t} /> : <></>
-                  )}
-                </div>
-              </TaskList>
-            </div>
-          </div>
-        </div>
-        <div className="notasRecientes">
-          <div className="leaveBox">
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "10px",
-              }}
-            >
-              <div className="mediumText">Notas_Recientes</div>
-            </div>
-            <div className="porqwuno">
-              {selectNotes(space).map((n) => (
-                <Note n={n} onDelete={onDelete} />
-              ))}
-            </div>
-          </div>
-        </div>
+        <Workspaces>
+          <SummaryBox label={"Procentaje_de_Progreso"} onClick={toWorkspaces} />
+          <WorkspaceStatistics>
+            {workspace.map((s) => (
+              <MyPieChart space={s.id} label={s.name} onClick={toWorkspaces} />
+            ))}
+            <PieContainer />
+          </WorkspaceStatistics>
+        </Workspaces>
+        <TasksPendingMobile>
+          <TaskListComponent
+            label={"Tareas_Pendientes"}
+            onClick={toTasks}
+            task={task}
+          />
+        </TasksPendingMobile>
+        <RecentNotes>
+          <SummaryBox label={"Notas_Recientes"} onClick={toNotes} />
+          <NotesList>
+            {selectNotes(space).map((n) => (
+              <Note n={n} onDelete={onDelete} />
+            ))}
+          </NotesList>
+        </RecentNotes>
         <CBotton setOpenModal={setOpenModal} />
-        {openModal ? (
+        {openModal && (
           <Modal>
             <NewTask />
           </Modal>
-        ) : (
-          <></>
         )}
       </Container>
+      <TasksPendingDesk>
+        <TaskListComponent
+          label={"Tareas_Pendientes"}
+          onClick={toTasks}
+          task={task}
+        />
+      </TasksPendingDesk>
     </Dash>
   );
 }
@@ -110,37 +88,69 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
+  min-width: calc(100% - 380px);
+  margin-right: 10px;
   justify-content: flex-start;
+  overflow-y: auto;
 
   @media screen and (max-width: 768px) {
-  }
-
-  .leaveBox {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    height: calc(100% - 20px);
+    margin-right: 0px;
     width: 100%;
-    margin-bottom: 10px;
-
-    @media screen and (max-width: 800px) {
-    }
-    @media screen and (max-width: 768px) {
-    }
+    min-height: calc(123px + 165px + 400px);
   }
+`;
 
-  .statusWorkplaces {
+export const Workspaces = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+`;
+export const WorkspaceStatistics = styled.div`
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 123px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 10px;
+`;
+
+export const RecentNotes = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  height: 400px;
+`;
+export const NotesList = styled.div`
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 10px;
+`;
+
+export const TasksPendingDesk = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+export const TasksPendingMobile = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    width: 100%;
     height: 100%;
-    width: 450px;
-    @media screen and (max-width: 800px) {
-      width: 50%;
-    }
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
+    min-height: 165px;
   }
 `;

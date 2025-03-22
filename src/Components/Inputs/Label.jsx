@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Input({ children, label }) {
+export default function Label({ children, label }) {
   return (
     <Container>
-      <LabelStyle className="miniText">{label}</LabelStyle>
+      <LabelStyle className="miniTextB">{label}</LabelStyle>
       {children}
     </Container>
   );
@@ -14,14 +14,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 50px;
+  align-items: center;
 `;
 
 export const LabelStyle = styled.div`
   position: relative;
-  left: 10px;
   width: fit-content;
-  padding: 2px 4px;
-  background-color: #fff;
-  border-radius: 5px;
+  padding: 2px 10px;
+  background-color: var(--white);
+  color: var(--primary-main);
+  border-radius: 8px 8px 0px 0px;
 `;

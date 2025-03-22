@@ -1,35 +1,32 @@
 import React from "react";
 import { Context } from "../../../Context";
-import { Separator } from "../../../Components/Modals/Separator";
+import { SelectorSpace } from "../../../Components/SelectorSpace";
+import DataSearch from "../../../Components/Inputs/DataSearch";
 import { Modal } from "../../../Components/Modals/Modal";
-import { MyIcon } from "../../../Styles/styles";
 import { NewNote } from "./Mods/NewNote";
-import styled from "styled-components";
-import "./notes.css";
 import { CBotton } from "../../../Components/Bottons/CBotton";
+import { Note } from "./Components/Note";
 import { NoteDetails } from "./Mods/NoteDetails";
 import { NoteEdit } from "./Mods/NoteEdit";
-import { SelectorSpace } from "../../../Components/SelectorSpace";
-import { Note } from "./Components/Note";
-import { NoteFinder } from "./Components/NoteFinder";
+import styled from "styled-components";
+import "./notes.css";
 
 function NotesUI() {
   const {
     notesLoading,
     notesError,
     deleteNote,
-    setNotesDetails,
     showDetails,
-    setShowDetails,
     showEdit,
-    setShowEdit,
     openModal,
     setOpenModal,
     selectNotes,
     space,
-    recentNotes,
-    setRecentNotes,
+    searchNotes,
+    setSearchNotes,
   } = React.useContext(Context);
+
+  const notes = selectNotes(space);
 
   const onDelete = (id) => {
     deleteNote(id);
@@ -38,44 +35,36 @@ function NotesUI() {
   return (
     <Container>
       <SelectorSpace />
-      <NoteFinder />
+      <DataSearch
+        placeholder={"... Buscar entre tus notas... "}
+        value={searchNotes}
+        setSearchValue={setSearchNotes}
+      />
 
       <div className="generalNotes">
-        {notesLoading ? (
-          <></>
-        ) : notesError ? (
-          <></>
-        ) : !notesLoading && selectNotes(space).length === 0 ? (
-          <></>
-        ) : (
-          selectNotes(space).map((n) => <Note n={n} onDelete={onDelete} />)
-        )}
+        {!notesLoading &&
+          !notesError &&
+          notes.length > 0 &&
+          notes.map((n) => <Note key={n.id} n={n} onDelete={onDelete} />)}
       </div>
       <CBotton setOpenModal={setOpenModal} title="Nueva" />
 
-      {/* Modal para Editar Notas */}
-      {showEdit ? (
+      {showEdit && (
         <Modal>
           <NoteEdit />
         </Modal>
-      ) : (
-        <></>
       )}
-      {/* Modal para Ver Notas */}
-      {showDetails ? (
+
+      {showDetails && (
         <Modal>
           <NoteDetails />
         </Modal>
-      ) : (
-        <></>
       )}
-      {/* Modal para Crear Notas */}
-      {openModal ? (
+
+      {openModal && (
         <Modal title="Nueva Nota">
           <NewNote />
         </Modal>
-      ) : (
-        <></>
       )}
     </Container>
   );

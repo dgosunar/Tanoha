@@ -11,22 +11,8 @@ import { MyIcon } from "../../../../../Styles/styles";
 import "../../notes.css";
 
 function Note({ n, onDelete }) {
-  const {
-    notesLoading,
-    notesError,
-    deleteNote,
-    setNotesDetails,
-    showDetails,
-    setShowDetails,
-    showEdit,
-    setShowEdit,
-    openModal,
-    setOpenModal,
-    selectNotes,
-    space,
-    recentNotes,
-    setRecentNotes,
-  } = React.useContext(Context);
+  const { setNotesDetails, setShowDetails, setShowEdit, setRecentNotes } =
+    React.useContext(Context);
   return (
     <div className="note" key={n.id}>
       <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>

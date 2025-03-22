@@ -1,36 +1,28 @@
 import React from "react";
-import styled from "styled-components";
 import Label from "./Label";
+import styled from "styled-components";
 
-export default function TextArea({
-  label,
-  placeholder,
-  rows,
-  defaultValue,
-  setText,
-}) {
+export default function MyDate({ label, setDate }) {
   return (
     <Label label={label}>
-      <TextAreaStyle
+      <InputStyle
+        type="date"
         className="generalText"
-        placeholder={placeholder}
-        defaultValue={defaultValue}
-        rows={rows}
         onChange={(event) => {
-          setText(event.target.value);
+          setDate(event.target.value);
         }}
       />
     </Label>
   );
 }
 
-// <TextArea label={"Nombre"} placeholder={"Pedro, Juan..."} />
-
-export const TextAreaStyle = styled.textarea`
+export const InputStyle = styled.input`
   display: flex;
   width: calc(100% - 22px);
+  height: 18px;
   padding: 10px;
   margin-top: -10px;
+  justify-content: center;
   background-color: var(--white);
   border: 1px solid var(--gray-light);
   border-radius: 21px;

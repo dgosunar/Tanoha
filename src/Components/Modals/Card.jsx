@@ -21,14 +21,15 @@ export const Container = styled.div`
   align-items: center;
   width: 500px;
   height: min-content;
+  max-height: 90vh;
   background-color: var(--white);
   color: var(--black);
   padding: 10px;
   gap: 10px;
-  border-radius: 8px;
+  border-radius: 21px;
   box-shadow: 0px 4px 10px 0px var(--black);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 550px) {
     width: calc(100% - 50px);
   }
 `;

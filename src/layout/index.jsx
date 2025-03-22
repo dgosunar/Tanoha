@@ -17,10 +17,11 @@ export { Layout };
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: calc(100% - 20px);
+  height: calc(100% - 10px);
   width: calc(100% - 240px);
-  padding: 10px 120px 10px 120px;
+  padding: 10px 120px 0px 120px;
   gap: 10px;
+  z-index: 0;
 
   @media screen and (max-width: 1024px) {
     width: calc(100% - 120px);

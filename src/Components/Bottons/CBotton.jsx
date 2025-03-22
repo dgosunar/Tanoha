@@ -19,7 +19,7 @@ export { CBotton };
 
 export const CreateTodoButton = styled.div`
   position: absolute;
-  z-index: 30;
+  z-index: 1;
   cursor: pointer;
   bottom: 15px;
   right: 120px;
