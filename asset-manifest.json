@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Tanoha/static/css/main.2328ae7c.css",
-    "main.js": "/Tanoha/static/js/main.30a29b3c.js",
+    "main.css": "/Tanoha/static/css/main.aab45b82.css",
+    "main.js": "/Tanoha/static/js/main.014c1eb3.js",
     "static/js/453.1c3173f4.chunk.js": "/Tanoha/static/js/453.1c3173f4.chunk.js",
     "index.html": "/Tanoha/index.html",
-    "main.2328ae7c.css.map": "/Tanoha/static/css/main.2328ae7c.css.map",
-    "main.30a29b3c.js.map": "/Tanoha/static/js/main.30a29b3c.js.map",
+    "main.aab45b82.css.map": "/Tanoha/static/css/main.aab45b82.css.map",
+    "main.014c1eb3.js.map": "/Tanoha/static/js/main.014c1eb3.js.map",
     "453.1c3173f4.chunk.js.map": "/Tanoha/static/js/453.1c3173f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2328ae7c.css",
-    "static/js/main.30a29b3c.js"
+    "static/css/main.aab45b82.css",
+    "static/js/main.014c1eb3.js"
   ]
 }
