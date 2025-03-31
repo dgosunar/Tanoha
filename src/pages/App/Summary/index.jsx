@@ -41,7 +41,7 @@ function Summary() {
     <Dash title={"Resumen"}>
       <Container>
         <Workspaces>
-          <SummaryBox label={"Procentaje_de_Progreso"} onClick={toWorkspaces} />
+          <SummaryBox label={"Porcentage_de_Progreso"} onClick={toWorkspaces} />
           <WorkspaceStatistics>
             {workspace.map((s) => (
               <MyPieChart space={s.id} label={s.name} onClick={toWorkspaces} />
