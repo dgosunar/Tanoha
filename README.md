@@ -1,72 +1,65 @@
-<img src='./public/Images/BannerTaskHabits.png'>
+# TANOHA
 
-# Getting Started with Create React App
+Tanoha es una aplicación web desarrollada con React.js que permite la gestión eficiente de tareas, notas y hábitos. Su nombre proviene de Tasks, Notes, and Habits (o en español: Tareas, Notas y Hábitos).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- <img src='./public/Images/BannerTaskHabits.png'> -->
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+Con Tanoha, puedes:
 
-### `npm start`
+- Gestionar tareas: Crear, programar y marcar tareas como completadas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Crear y organizar notas: Almacenar información de manera estructurada.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Manejar hábitos (Próximamente): Una funcionalidad en desarrollo para ayudarte a construir y mantener hábitos positivos.
 
-### `npm test`
+- Espacios de trabajo personalizados: Crea múltiples espacios de trabajo con tareas, notas y hábitos independientes para organizar mejor tus proyectos y actividades.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Características
 
-### `npm run build`
+- Creación y programación de tareas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Seguimiento y cumplimiento de tareas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Creación y organización de notas escritas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Sección de hábitos en desarrollo.
 
-### `npm run eject`
+- Múltiples espacios de trabajo personalizados.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tecnologías Utilizadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React.js - Framework principal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React Router - Manejo de rutas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+LocalHost - Almacenamiento de datos
 
-## Learn More
+## Despliegue
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Puedes acceder a la versión en producción en: https://dgosunar.github.io/Tanoha/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contribución
 
-### Code Splitting
+Si deseas contribuir al desarrollo de Tanoha, sigue estos pasos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Realiza un `fork` del repositorio.
 
-### Analyzing the Bundle Size
+Crea una rama con tu nueva característica: `git checkout -b feature-nueva`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Realiza los cambios y haz un commit: `git commit -m "Agregada nueva funcionalidad"`.
 
-### Making a Progressive Web App
+Envía un `Pull Request` para revisión.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- ##  Licencia
 
-### Advanced Configuration
+Este proyecto está bajo la licencia MIT - consulta el archivo LICENSE para más detalles. -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contacto
 
-### Deployment
+Para dudas o sugerencias, puedes contactarme en:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- GitHub: @dgosunar
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Correo Electrónico: dgosunar@gmail.com
