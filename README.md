@@ -2,14 +2,7 @@
 
 Tanoha es una aplicación web desarrollada con React.js que permite la gestión eficiente de tareas, notas y hábitos. Su nombre proviene de Tasks, Notes, and Habits (o en español: Tareas, Notas y Hábitos).
 
-<img src='./public/Presentación/Img1.jpeg' width="150">
-<img src='./public/Presentación/Img2.jpeg' width="150">
-<!-- <img src='./public/Presentación/Img3.jpeg' width="150"> -->
-<img src='./public/Presentación/Img4.jpeg' width="150">
-<img src='./public/Presentación/Img5.jpeg' width="150">
-<img src='./public/Presentación/Img6.jpeg' width="150">
-<img src='./public/Presentación/Img7.jpeg' width="150">
-<img src='./public/Presentación/Img8.jpeg' width="150">
+<img src='./public/Presentación/Img1.jpeg' width="150"><img src='./public/Presentación/Img2.jpeg' width="150"><!-- <img src='./public/Presentación/Img3.jpeg' width="150"> --><img src='./public/Presentación/Img4.jpeg' width="150"><img src='./public/Presentación/Img5.jpeg' width="150"><img src='./public/Presentación/Img6.jpeg' width="150"><img src='./public/Presentación/Img7.jpeg' width="150"><img src='./public/Presentación/Img8.jpeg' width="150">
 
 ## Descripción
 
