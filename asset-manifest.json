@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Tanoha/home/static/css/main.ea5f5933.css",
-    "main.js": "/Tanoha/home/static/js/main.39211752.js",
-    "static/js/453.1c3173f4.chunk.js": "/Tanoha/home/static/js/453.1c3173f4.chunk.js",
-    "static/media/Wallpaper.jpg": "/Tanoha/home/static/media/Wallpaper.ec5febfa9514661c1734.jpg",
-    "static/media/DGOsunaR.png": "/Tanoha/home/static/media/DGOsunaR.d4ca43c2d8f7bd23e539.png",
-    "static/media/404.png": "/Tanoha/home/static/media/404.c7241b9710847467ae93.png",
-    "static/media/Usuario.png": "/Tanoha/home/static/media/Usuario.6ec4e29512b66210b7e1.png",
-    "static/media/CompletLogoLight.png": "/Tanoha/home/static/media/CompletLogoLight.e4ae1d84734de700b4d2.png",
-    "index.html": "/Tanoha/home/index.html",
-    "main.ea5f5933.css.map": "/Tanoha/home/static/css/main.ea5f5933.css.map",
-    "main.39211752.js.map": "/Tanoha/home/static/js/main.39211752.js.map",
-    "453.1c3173f4.chunk.js.map": "/Tanoha/home/static/js/453.1c3173f4.chunk.js.map"
+    "main.css": "/Tanoha/static/css/main.ea5f5933.css",
+    "main.js": "/Tanoha/static/js/main.e1cd76c0.js",
+    "static/js/453.1c3173f4.chunk.js": "/Tanoha/static/js/453.1c3173f4.chunk.js",
+    "static/media/Wallpaper.jpg": "/Tanoha/static/media/Wallpaper.ec5febfa9514661c1734.jpg",
+    "static/media/DGOsunaR.png": "/Tanoha/static/media/DGOsunaR.d4ca43c2d8f7bd23e539.png",
+    "static/media/404.png": "/Tanoha/static/media/404.c7241b9710847467ae93.png",
+    "static/media/Usuario.png": "/Tanoha/static/media/Usuario.6ec4e29512b66210b7e1.png",
+    "static/media/CompletLogoLight.png": "/Tanoha/static/media/CompletLogoLight.e4ae1d84734de700b4d2.png",
+    "index.html": "/Tanoha/index.html",
+    "main.ea5f5933.css.map": "/Tanoha/static/css/main.ea5f5933.css.map",
+    "main.e1cd76c0.js.map": "/Tanoha/static/js/main.e1cd76c0.js.map",
+    "453.1c3173f4.chunk.js.map": "/Tanoha/static/js/453.1c3173f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ea5f5933.css",
-    "static/js/main.39211752.js"
+    "static/js/main.e1cd76c0.js"
   ]
 }
