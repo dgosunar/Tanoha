@@ -38,7 +38,7 @@ LocalHost - Almacenamiento de datos
 
 ## Despliegue
 
-Puedes acceder a la versión en producción en: https://dgosunar.github.io/Tanoha/
+Puedes acceder a la versión en producción en: https://dgosunar.github.io/Tanoha/home
 
 ## Contribución
 

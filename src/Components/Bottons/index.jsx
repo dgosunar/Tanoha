@@ -81,4 +81,5 @@ export const BottonBox = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+  filter: drop-shadow(5px 5px 10px black);
 `;

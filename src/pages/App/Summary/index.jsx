@@ -1,5 +1,5 @@
 import React from "react";
-import { Dash } from "../../../layout/Dash";
+import { Dash } from "../../../Layout/Dash";
 import { Context } from "../../../Context";
 import styled from "styled-components";
 import { CBotton } from "../../../Components/Bottons/CBotton";

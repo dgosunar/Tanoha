@@ -1,16 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { Layout } from "../../../layout";
-import {
-  BottonBox,
-  PBotton,
-  SBotton,
-  TBotton,
-} from "../../../Components/Bottons";
+import { Layout } from "../../../Layout";
+import { BottonBox, PBotton, SBotton } from "../../../Components/Bottons";
 import { Context } from "../../../Context";
 import Password from "../../../Components/Inputs/Password";
 import TextArea from "../../../Components/Inputs/TextArea";
+
+import User from "../../../Assets/Usuario.png";
 
 function Login() {
   const { setIsLogin } = React.useContext(Context);
@@ -36,7 +33,7 @@ function Login() {
     <Layout>
       <MainBox>
         <img
-          src="./Images/Usuario.png"
+          src={User}
           alt="Descripción de la imagen"
           width="150"
           height="150"

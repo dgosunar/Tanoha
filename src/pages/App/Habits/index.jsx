@@ -2,7 +2,7 @@ import React from "react";
 import { CBotton } from "../../../Components/Bottons/CBotton";
 import { Modal } from "../../../Components/Modals/Modal";
 import { Context } from "../../../Context";
-import { Dash } from "../../../layout/Dash";
+import { Dash } from "../../../Layout/Dash";
 
 function Habits() {
   const { openModal, setOpenModal } = React.useContext(Context);

@@ -1,10 +1,13 @@
+import React from "react";
 import styled from "styled-components";
 import { Navbar } from "../Components/Navbar";
-import { BbHome } from "../Components/Backgrounds/BgHome";
+import { BbHome } from "../Components/Backgrounds";
+import { Context } from "../Context";
 
 function Layout({ children }) {
+  const { isLogin } = React.useContext(Context);
   return (
-    <Container>
+    <Container isLogin={isLogin}>
       <Navbar />
       <Page>{children}</Page>
       <BbHome />
@@ -29,13 +32,13 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: ${({ isLogin }) => (isLogin ? "column-reverse" : "column")};
     width: calc(100% - 60px);
     padding: 10px 30px 10px 30px;
   }
 
   @media screen and (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: ${({ isLogin }) => (isLogin ? "column-reverse" : "column")};
     width: calc(100% - 20px);
     padding: 10px 10px 10px 10px;
   }
@@ -47,4 +50,5 @@ export const Page = styled.div`
   align-items: flex-start;
   height: calc(100% - 50px);
   overflow-y: auto;
+  scrollbar-width: none;
 `;

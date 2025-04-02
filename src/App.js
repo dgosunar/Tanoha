@@ -2,9 +2,10 @@ import React from "react";
 import { useRoutes, BrowserRouter } from "react-router-dom";
 import { ContextProvider } from "./Context";
 
-import Home from "./pages/";
+import Home from "./pages/Home";
 import Login from "./pages/Home/Login";
 import Singup from "./pages/Home/Signup";
+import About from "./pages/Home/About";
 import Contact from "./pages/Home/Contact";
 import Summary from "./pages/App/Summary";
 import Tasks from "./pages/App/Tasks";
@@ -18,9 +19,10 @@ import "./Styles/App.css";
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: "/Tanoha/", element: <Home /> },
+    { path: "/Tanoha/home", element: <Home /> },
     { path: "/Tanoha/login", element: <Login /> },
     { path: "/Tanoha/singup", element: <Singup /> },
+    { path: "/Tanoha/about", element: <About /> },
     { path: "/Tanoha/contact", element: <Contact /> },
     { path: "/Tanoha/*", element: <NotFound /> },
     { path: "/*", element: <NotFound2 /> },

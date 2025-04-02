@@ -1,24 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { Layout } from "../../../layout";
-import { Context } from "../../../Context";
+import { Layout } from "../../../Layout";
 import TextArea from "../../../Components/Inputs/TextArea";
-import Select, { SelectStyle } from "../../../Components/Inputs/Select";
-import DataSearch from "../../../Components/Inputs/DataSearch";
-import Date from "../../../Components/Inputs/MyDate";
+import Select from "../../../Components/Inputs/Select";
 import Password from "../../../Components/Inputs/Password";
-import {
-  BottonBox,
-  PBotton,
-  SBotton,
-  TBotton,
-} from "../../../Components/Bottons";
+import { BottonBox, PBotton, SBotton } from "../../../Components/Bottons";
 import MyDate from "../../../Components/Inputs/MyDate";
 
-function Singup() {
-  const { searchValue, setSearchValue } = React.useContext(Context);
+import User from "../../../Assets/Usuario.png";
 
+function Singup() {
   const navigate = useNavigate();
   const redirecionar = (dirección) => navigate(dirección);
 
@@ -37,7 +29,7 @@ function Singup() {
   };
 
   const onCancel = () => {
-    redirecionar("/Tanoha/");
+    redirecionar("/Tanoha/home");
   };
 
   return (
@@ -45,7 +37,7 @@ function Singup() {
       <MainBox>
         <ColumnBox>
           <img
-            src="./Images/Usuario.png"
+            src={User}
             alt="Descripción de la imagen"
             width="150"
             height="150"

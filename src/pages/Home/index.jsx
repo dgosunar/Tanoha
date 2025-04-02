@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { BottonBox, SBotton, TBotton } from "../Components/Bottons";
 import { useNavigate } from "react-router-dom";
-import { Layout } from "../layout";
+
+import { Layout } from "../../Layout";
+import { BottonBox, SBotton, TBotton } from "../../Components/Bottons";
+
+import CompletLogo from "../../Assets/CompletLogoLight.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -22,8 +25,8 @@ function Home() {
         <LogoBox>
           <img
             style={{ filter: "drop-shadow(5px 5px 10px black)" }}
-            src="./Logos/CompletLogoLight.png"
-            alt="imagotipo"
+            src={CompletLogo}
+            alt="CompletLogo"
           />
           <div className="secondarySubtitle">
             Gestiona tus tareas, conquista tus metas
@@ -32,7 +35,7 @@ function Home() {
             Pequeños hábitos, grandes victorias
           </div>
         </LogoBox>
-        <BottonBox style={{ filter: "drop-shadow(5px 5px 10px black)" }}>
+        <BottonBox>
           <TBotton onClick={logIn}>Ingresar</TBotton>
           <SBotton onClick={singUp}>Registrase</SBotton>
         </BottonBox>

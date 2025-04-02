@@ -22,7 +22,7 @@ function MobileNav({ titles }) {
 
   const logOut = () => {
     setIsLogin(false);
-    redirecionar("/Tanoha/");
+    redirecionar("/Tanoha/home");
   };
   const logIn = () => {
     setIsLogin(true);
@@ -49,7 +49,7 @@ function MobileNav({ titles }) {
               to={t.route}
               key={t.label}
               className={({ isActive }) =>
-                isActive ? "itemSelected mediumTextB" : "mediumText"
+                isActive ? "itemSelected item" : "item"
               }
             >
               <div className={({ isLogin }) => (isLogin ? "item" : "")}>

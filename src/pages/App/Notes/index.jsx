@@ -1,5 +1,5 @@
 import React from "react";
-import { Dash } from "../../../layout/Dash";
+import { Dash } from "../../../Layout/Dash";
 import { ContextProvider } from "../../../Context";
 import NotesUI from "./notesUI";
 

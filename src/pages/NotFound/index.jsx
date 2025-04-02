@@ -3,27 +3,22 @@ import styled from "styled-components";
 import "./../../Styles/index.css";
 import { PBotton } from "../../Components/Bottons";
 import { useNavigate } from "react-router-dom";
-import { Layout } from "../../layout";
+import { Layout } from "../../Layout";
+
+import Error404 from "../../Assets/404.png";
 
 function NotFound() {
   const navigate = useNavigate();
-  const redi = () => navigate("/Tanoha/");
+  const redi = () => navigate("/Tanoha/home");
   return (
     <Layout>
       <Container>
-        <div className="primaryTitle">Pagina No Encontrada</div>
-        <PBotton onClick={redi}>Volver</PBotton>
         <img
-          src="./Images/404 error with person looking for-bro.png"
-          alt="image404"
+          style={{ filter: "drop-shadow(5px 5px 10px black)", height: "300px" }}
+          src={Error404}
+          alt="Error404"
         />
-        <a
-          href="https://storyset.com/online"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Online illustrations by Storyset
-        </a>
+        <PBotton onClick={redi}>Volver</PBotton>
       </Container>
     </Layout>
   );

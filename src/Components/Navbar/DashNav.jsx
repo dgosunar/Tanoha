@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { all } from "@fortawesome/free-solid-svg-icons";
 import "../../Styles/generalStyles.css";
 import "./navStyles.css";
 import styled from "styled-components";
-import { TBotton, SBotton } from "../Bottons";
 import { Context } from "../../Context";
 import { useNavigate } from "react-router-dom";
 
@@ -23,7 +21,7 @@ function DashNav({ titles }) {
 
   const logOut = () => {
     setIsLogin(false);
-    redirecionar("/Tanoha/");
+    redirecionar("/Tanoha/home");
   };
   const logIn = () => {
     setIsLogin(true);

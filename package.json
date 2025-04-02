@@ -25,6 +25,7 @@
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.8",
+    "swiper": "^11.2.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -53,7 +54,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://dgosunar.github.io/Tanoha/",
+  "homepage": "https://dgosunar.github.io/Tanoha/home",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.1"

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import wallpaper from "../../Assets/Wallpaper.jpg";
 
 function BbHome() {
   return (
     <Fondo>
-      <img src="./Fondos/Fondo1.jpg" alt="imagotipo"/>
+      <img src={wallpaper} alt="imagotipo" />
     </Fondo>
   );
 }
@@ -17,9 +18,9 @@ export const Fondo = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: -1; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 `;
