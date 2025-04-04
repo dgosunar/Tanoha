@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Tanoha/static/css/main.ea5f5933.css",
-    "main.js": "/Tanoha/static/js/main.9f626bb7.js",
+    "main.css": "/Tanoha/static/css/main.5fc896c6.css",
+    "main.js": "/Tanoha/static/js/main.a310015a.js",
     "static/js/453.1c3173f4.chunk.js": "/Tanoha/static/js/453.1c3173f4.chunk.js",
     "static/media/Wallpaper.jpg": "/Tanoha/static/media/Wallpaper.ec5febfa9514661c1734.jpg",
     "static/media/Process.png": "/Tanoha/static/media/Process.26bacb0eb393ea376cee.png",
@@ -10,12 +10,12 @@
     "static/media/Usuario.png": "/Tanoha/static/media/Usuario.6ec4e29512b66210b7e1.png",
     "static/media/CompletLogoLight.png": "/Tanoha/static/media/CompletLogoLight.e4ae1d84734de700b4d2.png",
     "index.html": "/Tanoha/index.html",
-    "main.ea5f5933.css.map": "/Tanoha/static/css/main.ea5f5933.css.map",
-    "main.9f626bb7.js.map": "/Tanoha/static/js/main.9f626bb7.js.map",
+    "main.5fc896c6.css.map": "/Tanoha/static/css/main.5fc896c6.css.map",
+    "main.a310015a.js.map": "/Tanoha/static/js/main.a310015a.js.map",
     "453.1c3173f4.chunk.js.map": "/Tanoha/static/js/453.1c3173f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea5f5933.css",
-    "static/js/main.9f626bb7.js"
+    "static/css/main.5fc896c6.css",
+    "static/js/main.a310015a.js"
   ]
 }
